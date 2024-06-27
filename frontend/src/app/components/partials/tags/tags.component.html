@@ -1,0 +1,9 @@
+<!-- <div *ngIf="tags"> -->
+  @if (tags) {
+    <div>
+    <!-- <a *ngFor="let tag of tags"> -->
+      @for (tag of tags; track $index) {
+      <a>
+      {{tag.name}}({{tag.count}})
+    </a>}
+  </div>}

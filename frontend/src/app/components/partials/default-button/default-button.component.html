@@ -1,0 +1,11 @@
+<div class="container">
+  <button
+  [style.color]="color"
+  [style.background-color]="bgColor"
+  [style.font-size.rem]="fontSizeRem + 'rem'"
+  [style.width.rem]="widthRem + 'rem'"
+  [type]="type"
+  (click)="onClick.emit()">
+  {{ text }}
+</button>
+  </div>

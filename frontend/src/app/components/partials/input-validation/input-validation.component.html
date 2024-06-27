@@ -1,0 +1,9 @@
+<!-- <div class="error-list" *ngIf="errorMessages && showErrorsWhen"> -->
+  @if (errorMessages && showErrorsWhen) {
+    <div class="error-list">
+    <!-- <div *ngFor="let errorMessage of errorMessages"> -->
+      @for (errorMessage of errorMessages; track $index) {
+    <div>
+      {{errorMessage}}
+    </div>}
+  </div>}
