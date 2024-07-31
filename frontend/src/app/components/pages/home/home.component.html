@@ -10,7 +10,7 @@ resetLinkText="Reset Search">
     @for (food of foods; track $index) {
     <li>
     <a routerLink="/food/{{food.id}}">
-      <img src="assets/food-2.jpg" alt="Food Image">
+      <img [src]="food.imageUrl" alt="Food Image">
         <div class="content">
             <div class="name">
                 {{food.name}}

@@ -119,7 +119,7 @@ const loginUser = async (email: string, password: string): Promise<any> => {
   return userWithoutPassword;
 };
 
-const app = express();
+/* const app = express();
 const port = 3000;
 
 app.use(express.json()); // Parse JSON bodies
@@ -140,4 +140,4 @@ console.log(loginUser)
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
-});
+}); */

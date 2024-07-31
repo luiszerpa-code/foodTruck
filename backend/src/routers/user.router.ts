@@ -72,12 +72,12 @@ router.get("/seed", asyncHandler(
  }
  ))
 
- /* const bcryptPassword = require('bcryptjs'); // Import bcryptjs for password hashing
+ const bcryptPassword = require('bcryptjs'); // Import bcryptjs for password hashing
 
  router.post("/login", asyncHandler(
    async (req, res) => {
      const { email, password } = req.body;
-     
+     console.log(req.body)
      // Query the user by email
      const user = await UserModel.findOne({ email });
      console.log(user)
@@ -98,7 +98,7 @@ router.get("/seed", asyncHandler(
        res.status(HTTP_BAD_REQUEST).send("Username or password is invalid! second else");
      }
    }
- )); */
+ ));
 
 /* router.post("/login", asyncHandler(
   async (req, res) => {
