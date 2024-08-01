@@ -5,6 +5,7 @@
   "main": "server.ts",
   "scripts": {
     "start": "cd src && nodemon server.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
