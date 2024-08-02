@@ -1,6 +1,6 @@
 import {model, Schema, Types} from 'mongoose';
 import { OrderStatus } from '../constants/order_status';
-import { Food, FoodSchema } from './food.model';
+import { Food, FoodSchema } from './foodm';
 
 export interface LatLng{
     lat: string;
