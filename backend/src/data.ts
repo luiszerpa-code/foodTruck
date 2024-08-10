@@ -1,6 +1,3 @@
-import bcrypt from 'bcryptjs';
-import express, { Request, Response } from 'express';
-
 export const sample_foods: any [] = [
     {
         id:'1',
@@ -10,7 +7,7 @@ export const sample_foods: any [] = [
         favorite: false,
         origins: ['italy'],
         stars: 4.5,
-        imageUrl: './assets/food-2.jgp',
+        imageUrl: './assets/food-1.jgp',
         tags: ['FastFood', 'Pizza', 'Lunch'],
       },
       {
@@ -21,7 +18,7 @@ export const sample_foods: any [] = [
         favorite: true,
         origins: ['persia', 'middle east', 'china'],
         stars: 4.7,
-        imageUrl: './assets/food-2.jpg',
+        imageUrl: 'assets/food-2.jpg',
         tags: ['SlowFood', 'Lunch'],
       },
       {
@@ -92,52 +89,8 @@ export const sample_users: any[] = [
   {
     name: "Jane Doe",
     email: "Jane@gmail.com",
-    password: "argentina",
+    password: "12345",
     address: "Shanghai",
     isAdmin: false,
   },
 ]; 
-
-// Function to simulate user login
-const loginUser = async (email: string, password: string): Promise<any> => {
-  // Find user by email in sample_users
-  const user = sample_users.find(u => u.email === email);
-
-  if (!user) {
-    throw new Error("User not found");
-  }
-
-  // Compare the provided password with the user's password from sample data
-  //const isPasswordMatch = await bcrypt.compare(password, user.password);
-
-  if (password !== user.password) {
-    throw new Error("Password does not match");
-  }
-
-  // Passwords match, return the user object without the password
-  const { password: userPassword, ...userWithoutPassword } = user;
-  return userWithoutPassword;
-};
-
-const app = express();
-const port = 3000;
-
-app.use(express.json()); // Parse JSON bodies
-
-// Login route
-app.post("/login", async (req: Request, res: Response) => {
-  const { email, password } = req.body;
-
-  try {
-    const loggedInUser = await loginUser(email, password);
-    res.send(loggedInUser);
-  } catch (error: any) {
-    res.status(401).send({ error: error.message });
-  }
-});
-console.log(loginUser)
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});

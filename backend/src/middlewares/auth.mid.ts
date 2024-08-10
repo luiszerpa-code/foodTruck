@@ -1,4 +1,4 @@
-import { verify } from "jsonwebtoken";
+/* import { verify } from "jsonwebtoken";
 import { HTTP_UNAUTHORIZED } from "../constants/http_status";
 
 
@@ -15,4 +15,4 @@ export default (req: any, res: any, next: any) => {
     }
 
     return next();
-}
+} */

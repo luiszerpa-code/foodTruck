@@ -3,10 +3,10 @@ import asyncHander from 'express-async-handler';
 import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import { OrderStatus } from '../constants/order_status';
 import { OrderModel } from '../models/order.model';
-import auth from '../middlewares/auth.mid';
+//import auth from '../middlewares/authm';
 
 const router = Router();
-router.use(auth);
+//router.use(auth);
 
 router.post('/create',
 asyncHander(async (req:any, res:any) => {
