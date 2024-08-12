@@ -1,12 +1,21 @@
 {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "moduleResolution": "node",
-      "strict": true,
-      "outDir": "./built",
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "esModuleInterop": true
-    },
-    "include": ["src/**/*"],
+  "compilerOptions": {
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "checkJs": false, // Disable type checking for JavaScript files
+    "module": "commonjs", // Use CommonJS module system
+    "moduleResolution": "node", // Resolve modules in Node.js style
+    "target": "ES6", // Target ECMAScript 6
+    "outDir": "./built", // Output directory for compiled files
+    "esModuleInterop": true, // Allows default imports from modules with no default export
+    "strict": false, // Disable strict type checking
+    "experimentalDecorators": false, // Disable decorators if not using TypeScript
+    "emitDecoratorMetadata": false // Disable emitting decorator metadata
+  },
+  "include": [
+    "src/**/*" // Include all files in the src folder
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules folder
+    "built" // Exclude the output directory
+  ]
 }

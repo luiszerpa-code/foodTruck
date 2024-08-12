@@ -1,7 +1,7 @@
-import {Router} from 'express';
-import { sample_foods, sample_tags } from '../data';
-import asyncHandler from 'express-async-handler';
-import { FoodModel } from '../models/food.model';
+const { Router } = require('express');
+const { sample_foods, sample_tags } = require('../data.js');
+const asyncHandler = require('express-async-handler');
+const { FoodModel } = require('../models/foodmodel.js');
 
 const router = Router();
 
@@ -80,4 +80,4 @@ router.get("/:foodId", asyncHandler(
 ))
 
 
-export default router;
+module.exports = router;
